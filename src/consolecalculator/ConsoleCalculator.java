@@ -62,7 +62,7 @@ public class ConsoleCalculator {
                 //Check if input is number
                 try {
                     numB = Double.parseDouble(input);
-                    looped = false;
+                    break;
                 } catch (NumberFormatException e) {
                     System.err.println(input + " is not a number. Please try again.");
                 }
