@@ -17,8 +17,8 @@ public class ConsoleCalculator {
     public static void main(String[] args) {
         //Variable declaration
         String input; //For handling user input
-        double numA;
-        double numB;
+        double numA = 0;
+        double numB = 0;
         double result = 0;
         String operation;
         //Setting up scanner
@@ -26,14 +26,31 @@ public class ConsoleCalculator {
         //Get the first number
         System.out.print("Please enter the first number: ");
         input = sc.nextLine();
-        numA = Double.parseDouble(input);
+        //Check if input is number
+        try{
+            numA = Double.parseDouble(input);
+        }
+        catch(NumberFormatException e){
+            System.err.println(input + " is not a number. Program will terminate.");
+            //System.err.println(e.fillInStackTrace());
+            System.exit(1);
+        }
+        
         //Get the required operation
         System.out.print("Please enter the operation (+,-,*,/): ");
         operation = sc.nextLine();
         //Get the second number
         System.out.print("Please enter the second number: ");
         input = sc.nextLine();
-        numB = Double.parseDouble(input);
+        //Check if input is number
+        try{
+            numB = Double.parseDouble(input);
+        }
+        catch(NumberFormatException e){
+            System.err.println(input + " is not a number. Program will terminate.");
+            //System.err.println(e.fillInStackTrace());
+            System.exit(1);
+        }
         switch (operation) {
             case "+":
                 result = numA + numB;
@@ -49,7 +66,7 @@ public class ConsoleCalculator {
                 break;
             default:
                 System.err.println("No valid operation defined.");
-                System.exit(0);
+                System.exit(2);
         }
         System.out.println("Result is " + result);
 
