@@ -27,15 +27,14 @@ public class ConsoleCalculator {
         System.out.print("Please enter the first number: ");
         input = sc.nextLine();
         //Check if input is number
-        try{
+        try {
             numA = Double.parseDouble(input);
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.err.println(input + " is not a number. Program will terminate.");
             //System.err.println(e.fillInStackTrace());
             System.exit(1);
         }
-        
+
         //Get the required operation
         System.out.print("Please enter the operation (+,-,*,/): ");
         operation = sc.nextLine();
@@ -43,10 +42,9 @@ public class ConsoleCalculator {
         System.out.print("Please enter the second number: ");
         input = sc.nextLine();
         //Check if input is number
-        try{
+        try {
             numB = Double.parseDouble(input);
-        }
-        catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             System.err.println(input + " is not a number. Program will terminate.");
             //System.err.println(e.fillInStackTrace());
             System.exit(1);
