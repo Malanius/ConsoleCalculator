@@ -34,17 +34,22 @@ public class ConsoleCalculator {
         System.out.print("Please enter the second number: ");
         input = sc.nextLine();
         numB = Double.parseDouble(input);
-        if (operation.equals("+")) {
-            result = numA + numB;
-        } else if (operation.equals("-")) {
-            result = numA - numB;
-        } else if (operation.equals("*")) {
-            result = numA * numB;
-        } else if (operation.equals("/")) {
-            result = numA / numB;
-        } else {
-            System.err.println("No valid operation defined.");
-            System.exit(0);
+        switch (operation) {
+            case "+":
+                result = numA + numB;
+                break;
+            case "-":
+                result = numA - numB;
+                break;
+            case "*":
+                result = numA * numB;
+                break;
+            case "/":
+                result = numA / numB;
+                break;
+            default:
+                System.err.println("No valid operation defined.");
+                System.exit(0);
         }
         System.out.println("Result is " + result);
 
