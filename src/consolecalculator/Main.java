@@ -16,7 +16,15 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        //Create used objects
+        Calculator calc = new Calculator();  //Create instance of calculator
+        Requestor requestor = new Requestor(); //Create instance of requestor
+        //Fill in variables for counting
+        double numA = requestor.requestNumber(1); //Get the first number
+        String operation = requestor.requestOperation(); //Get the operation
+        double numB = requestor.requestNumber(2); //Get the second number
+        // TODO find %replacement for double and rewritw with printf
+        System.out.println("Result of " + numA + " " + operation + " " + numB + " = " + calc.calculate(numA, numB, operation)); //Display the result
+    } //End of main
     
-}
+} //En of class
