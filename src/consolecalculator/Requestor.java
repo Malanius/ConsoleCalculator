@@ -60,8 +60,9 @@ public class Requestor {
         System.out.printf("Enter required operation (+,-,*,/):\n→");
         input = sc.nextLine();
         String validOp = "+-*/";
-        if (validOp.contains(input)) {
-               operation = input;
+        String shortinput = input.substring(0,1);
+        if (validOp.contains(shortinput)) {
+               operation = shortinput;
         } else {
             System.err.printf("%s is invalid operation. Try again.\n", input);
             this.requestOperation();
